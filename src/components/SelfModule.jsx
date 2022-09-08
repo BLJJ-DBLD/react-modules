@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import '../assets/styles/dragView.scss'
 
 function SelfModule (props) {

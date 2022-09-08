@@ -1,5 +1,5 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
 import {routeMap} from './routers/const'
 import './App.css'
 
@@ -15,7 +15,7 @@ function App () {
         ))}
       </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

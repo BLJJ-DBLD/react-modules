@@ -2,6 +2,7 @@ import Home from './Home'
 import SelfModuleRoute from './SelfModuleRoute'
 import ColorBlockRoute from './ColorBlockRoute'
 import SelectApprRoute from './SelectApprRoute'
+import DecomposeGoodsRoute from './DecomposeGoodsRoute'
 
 export const routeMap = [{
   name: 'home',
@@ -19,4 +20,8 @@ export const routeMap = [{
   name: 'SelectApprRoute',
   path: '/SelectApprRoute',
   module: SelectApprRoute
+}, {
+  name: 'DecomposeGoodsRoute',
+  path: '/DecomposeGoodsRoute',
+  module: DecomposeGoodsRoute
 }]

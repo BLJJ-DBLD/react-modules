@@ -1,5 +1,5 @@
-import React from 'react';
-import SelfModule from '../components/SelfModule';
+import React from 'react'
+import SelfModule from '../components/SelfModule'
 
 function SelfModuleRoute (props) {
   return (<SelfModule />)

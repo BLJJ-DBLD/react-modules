@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import {routeMap} from './const'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 function Home () {
   return (
