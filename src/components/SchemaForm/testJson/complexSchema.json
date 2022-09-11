@@ -1,0 +1,175 @@
+{
+  "schema": {
+    "type": "object",
+    "labelWidth": 120,
+    "displayType": "row",
+    "properties": {
+      "object_xqKdXL": {
+        "title": "对象",
+        "type": "object",
+        "properties": {
+          "suffix": {
+            "title": "后缀",
+            "type": "string",
+            "width": "50%",
+            "props": {}
+          },
+          "duraMax": {
+            "title": "堆叠数",
+            "type": "string",
+            "width": "50%",
+            "widget": "select",
+            "ui:fetch": {
+              "url": "/dict/list/dura",
+              "method": "get",
+              "enumMap": {
+                "label": "name",
+                "value": "id"
+              }
+            },
+            "enum": [],
+            "enumNames": []
+          },
+          "goodsType": {
+            "title": "材料类型",
+            "type": "number",
+            "widget": "select",
+            "ui:fetch": {
+              "url": "/dict/list/goodsType",
+              "method": "get",
+              "enumMap": {
+                "label": "name",
+                "value": "id"
+              }
+            }
+          },
+          "needLevel": {
+            "title": "需求等级",
+            "type": "number",
+            "width": "50%"
+          },
+          "price": {
+            "title": "出售价格",
+            "type": "number",
+            "width": "50%"
+          },
+          "needConf": {
+            "title": "物品操作",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "widget": "multiSelect",
+            "ui:fetch": {
+              "url": "/dict/list/needconf",
+              "method": "get",
+              "enumMap": {
+                "label": "name",
+                "value": "id"
+              }
+            }
+          },
+          "color": {
+            "title": "颜色块",
+            "type": "number",
+            "default": 0,
+            "required": true,
+            "width": "50%",
+            "widget": "colorBlock",
+            "ui:fetch": {
+              "url": "/dict/list/color-block",
+              "method": "get"
+            }
+          }
+        }
+      },
+      "simpleList_o2DVDI": {
+        "title": "数组",
+        "type": "array",
+        "widget": "simpleList",
+        "items": {
+          "type": "object",
+          "properties": {
+            "object_xqKdXL_KdI2mF": {
+              "title": "对象",
+              "type": "object",
+              "properties": {
+                "suffix": {
+                  "title": "后缀",
+                  "type": "string",
+                  "props": {}
+                },
+                "duraMax": {
+                  "title": "堆叠数",
+                  "type": "string",
+                  "widget": "select",
+                  "ui:fetch": {
+                    "url": "/dict/list/dura",
+                    "method": "get",
+                    "enumMap": {
+                      "label": "name",
+                      "value": "id"
+                    }
+                  },
+                  "enum": [],
+                  "enumNames": []
+                },
+                "goodsType": {
+                  "title": "材料类型",
+                  "type": "number",
+                  "widget": "select",
+                  "ui:fetch": {
+                    "url": "/dict/list/goodsType",
+                    "method": "get",
+                    "enumMap": {
+                      "label": "name",
+                      "value": "id"
+                    }
+                  }
+                },
+                "needLevel": {
+                  "title": "需求等级",
+                  "type": "number"
+                },
+                "price": {
+                  "title": "出售价格",
+                  "type": "number"
+                },
+                "needConf": {
+                  "title": "物品操作",
+                  "type": "array",
+                  "required": true,
+                  "items": {
+                    "type": "string"
+                  },
+                  "widget": "multiSelect",
+                  "ui:fetch": {
+                    "url": "/dict/list/needconf",
+                    "method": "get",
+                    "enumMap": {
+                      "label": "name",
+                      "value": "id"
+                    }
+                  }
+                },
+                "color": {
+                  "title": "颜色块",
+                  "type": "number",
+                  "default": 0,
+                  "required": true,
+                  "width": "50%",
+                  "widget": "colorBlock",
+                  "ui:fetch": {
+                    "url": "/dict/list/color-block",
+                    "method": "get"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "props": {}
+      }
+    }
+  }
+}

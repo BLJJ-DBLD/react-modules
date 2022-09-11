@@ -79,6 +79,8 @@ module.exports = {
       'before': false,
       'after': true
     }],
+    // 要求或禁止使用拖尾逗号
+    'comma-dangle': ['error', 'never'],
     // 控制逗号在行尾出现还是在行首出现 (默认行尾)
     // http://eslint.org/docs/rules/comma-style
     'comma-style': [2, 'last'],
@@ -342,6 +344,6 @@ module.exports = {
       'extensions': ['.js', '.jsx']
     }],
     // 禁止未使用的变量
-    'no-unused-vars': 0,
+    'no-unused-vars': 0
   }
 }

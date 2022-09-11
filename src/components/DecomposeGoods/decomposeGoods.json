@@ -1,0 +1,71 @@
+{
+  "schema": {
+    "type": "object",
+    "properties": {
+      "suffixText": {
+        "title": "后缀",
+        "type": "string",
+        "width": "50%",
+        "props": {}
+      },
+      "duraMax": {
+        "title": "堆叠数",
+        "type": "string",
+        "width": "50%",
+        "widget": "select",
+        "ui:fetch": {
+          "url": "/dict/list/dura",
+          "method": "get",
+          "enumMap": {
+            "label": "name",
+            "value": "id"
+          }
+        }
+      },
+      "goodsType": {
+        "title": "材料类型",
+        "type": "number",
+        "widget": "select",
+        "ui:fetch": {
+          "url": "/dict/list/goodsType",
+          "method": "get",
+          "enumMap": {
+            "label": "name",
+            "value": "id"
+          }
+        }
+      },
+      "needLevel": {
+        "title": "需求等级",
+        "type": "number",
+        "width": "50%"
+      },
+      "price": {
+        "title": "出售价格",
+        "type": "number",
+        "width": "50%"
+      },
+      "needConf": {
+        "title": "物品操作",
+        "type": "array",
+        "required": true,
+        "items": {
+          "type": "string"
+        },
+        "widget": "multiSelect",
+        "ui:fetch": {
+          "url": "/dict/list/needconf",
+          "method": "get",
+          "enumMap": {
+            "label": "name",
+            "value": "id"
+          }
+        }
+      }
+    },
+    "column": 1,
+    "labelWidth": 100,
+    "displayType": "row"
+  },
+  "uiSchema": {}
+}

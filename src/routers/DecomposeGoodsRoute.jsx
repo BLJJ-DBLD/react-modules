@@ -4,8 +4,9 @@ import DecomposeGoods from '../components/DecomposeGoods'
 
 export default function DecomposeGoodsRoute () {
   const [isShowDialog, setIsShowDialog] = useState(false)
+  const [data, setData] = useState({})
   const handleSuccess = (data) => {
-    console.log(data)
+    setData(data)
     setIsShowDialog(false)
   }
   const handleCancel = () => {
@@ -20,6 +21,7 @@ export default function DecomposeGoodsRoute () {
         onSuccess={handleSuccess}
         onCancel={handleCancel}
       />
+      返回值：<p>{JSON.stringify(data)}</p>
     </>
   )
 }

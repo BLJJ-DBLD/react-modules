@@ -3,15 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@rjsf/antd": "^5.0.0-beta.5",
-    "@rjsf/core": "^5.0.0-beta.5",
-    "@rjsf/utils": "^5.0.0-beta.5",
-    "@rjsf/validator-ajv6": "^5.0.0-beta.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "antd": "^4.23.0",
     "classnames": "^2.3.1",
+    "form-render": "^1.13.14",
+    "lodash": "^4.17.21",
     "node-sass": "npm:dart-sass",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -25,7 +23,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint --fix --ext .ts,.tsx "
   },
   "browserslist": {
     "production": [
