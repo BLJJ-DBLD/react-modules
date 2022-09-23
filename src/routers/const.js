@@ -3,6 +3,7 @@ import SelfModuleRoute from './SelfModuleRoute'
 import ColorBlockRoute from './ColorBlockRoute'
 import SelectApprRoute from './SelectApprRoute'
 import DecomposeGoodsRoute from './DecomposeGoodsRoute'
+import FrGeneratorRoute from './FrGeneratorRoute'
 
 export const routeMap = [{
   name: 'home',
@@ -24,4 +25,8 @@ export const routeMap = [{
   name: 'DecomposeGoodsRoute',
   path: '/DecomposeGoodsRoute',
   module: DecomposeGoodsRoute
+}, {
+  name: 'FrGeneratorRoute',
+  path: '/FrGeneratorRoute',
+  module: FrGeneratorRoute
 }]

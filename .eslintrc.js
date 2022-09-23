@@ -29,6 +29,7 @@ module.exports = {
         'allow': ['log', 'warn', 'error', 'info']
       }
     ],
+    'no-useless-escape': 0,
     // 禁止 function 定义中出现重名参数
     'no-dupe-args': 2,
     // 禁止对象字面量中出现重复的 key
