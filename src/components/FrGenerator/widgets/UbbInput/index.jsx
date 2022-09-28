@@ -1,4 +1,5 @@
-import React, { useMemo, useState } from 'react'
+import React, { useMemo } from 'react'
+import './index.scss'
 import { Input } from 'antd'
 const { TextArea } = Input
 
