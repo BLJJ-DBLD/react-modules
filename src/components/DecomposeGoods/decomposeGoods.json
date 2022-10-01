@@ -13,6 +13,7 @@
         "type": "string",
         "width": "50%",
         "widget": "select",
+        "reqMethod": "req",
         "ui:fetch": {
           "url": "/dict/list/dura",
           "method": "get",
@@ -26,6 +27,7 @@
         "title": "材料类型",
         "type": "number",
         "widget": "select",
+        "reqMethod": "req",
         "ui:fetch": {
           "url": "/dict/list/goodsType",
           "method": "get",
@@ -53,6 +55,7 @@
           "type": "string"
         },
         "widget": "multiSelect",
+        "reqMethod": "req",
         "ui:fetch": {
           "url": "/dict/list/needconf",
           "method": "get",

@@ -1,0 +1,31 @@
+{
+  "schema": {
+    "type": "object",
+    "properties": {
+      "inputName": {
+        "title": "简单输入框",
+        "type": "string"
+      },
+      "selectAppr_tFmr8j": {
+        "title": "图片选择",
+        "type": "object",
+        "widget": "SelectAppr",
+        "ui:fetch": {
+          "method": "get",
+          "enumMap": {
+            "label": "label",
+            "value": "value"
+          }
+        },
+        "properties": {}
+      },
+      "ubbInput_-UEszT": {
+        "title": "Ubb输入框",
+        "type": "string",
+        "widget": "UbbInput"
+      }
+    },
+    "labelWidth": 120,
+    "displayType": "row"
+  }
+}

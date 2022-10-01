@@ -47,7 +47,6 @@ export default function UbbInput ({value, onChange, ...rest}) {
   const htmlValue = useMemo(() => ubbToHtml(value), [value])
   return (
     <div className="ubb-input">
-      显示内容：<span className="ubb-html" dangerouslySetInnerHTML={htmlValue}></span>
       {
         rest.readOnly ? null : (
           <div className="ubb-text">
@@ -61,6 +60,7 @@ export default function UbbInput ({value, onChange, ...rest}) {
           </div>
         )
       }
+      显示内容：<span className="ubb-html" dangerouslySetInnerHTML={htmlValue}></span>
     </div>
   )
 }

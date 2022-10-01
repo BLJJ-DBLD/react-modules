@@ -18,7 +18,7 @@ function setProperty (source, promiseAll, path) {
   const cloneSource = cloneDeep(source)
   for (const key in cloneSource) {
     if (Object.prototype.hasOwnProperty.call(cloneSource, key)) {
-      if (!cloneSource[key]['ui:fetch']) {continue}
+      if (!(cloneSource[key]['reqMethod'] && cloneSource[key]['reqMethod'] === 'req')) {continue}
       // 设置需要配置的字段
       const keyPath = setPath(cloneSource, key, path)
       promiseAll.push(setEnum(cloneSource[key], keyPath))

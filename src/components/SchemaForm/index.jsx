@@ -1,7 +1,7 @@
 import React, {forwardRef, useEffect, useImperativeHandle, useRef, useState} from 'react'
 import FormRender, { useForm } from 'form-render'
 import deepSetProperties from './utils/deepSetProperties'
-import widgets from './const/widgets'
+import widgets from '../FrGenerator/widgets'
 import testJson from './testJson/complexSchema.json'
 import { Spin } from 'antd'
 

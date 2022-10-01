@@ -13,7 +13,9 @@ async function fetchData (request) {
     method = 'get'
   } = request
   try {
-    const response = await fetch('http://rap2api.taobao.org/app/mock/306508' + url, {
+    const reg = /^http(s)?:\/\//
+    const hasHttp = reg.test(url)
+    const response = await fetch(hasHttp ? url : 'http://rap2api.taobao.org/app/mock/306508' + url, {
       method
     })
     if (response.status === 200) {return response.json()}
@@ -26,26 +28,26 @@ async function fetchData (request) {
 
 export async function setEnum (source, path) {
   const {enumMap = {}} = source['ui:fetch']
-  const enumList = []
-  const enumNameList = []
+  const enumValues = []
+  const enumLabels = []
   try {
     const {list} = await fetchData(source['ui:fetch'])
     list.forEach((item) => {
-      enumList.push(item[enumMap.value || 'value'])
-      enumNameList.push(item[enumMap.label || 'label'])
+      enumValues.push(item[enumMap.value || 'value'])
+      enumLabels.push(item[enumMap.label || 'label'])
     })
     return {
       [path]: {
-        enum: enumList,
-        enumNames: enumNameList
+        enum: enumValues,
+        enumNames: enumLabels
       }
     }
   } catch (error) {
     console.log(error)
     return {
       [path]: {
-        enum: enumList,
-        enumNames: enumNameList
+        enum: enumValues,
+        enumNames: enumLabels
       }
     }
   }

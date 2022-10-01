@@ -1,0 +1,93 @@
+{
+  "reqMethod": {
+    "title": "请求方式",
+    "type": "string",
+    "enum": [
+      "req",
+      "dict"
+    ],
+    "enumNames": [
+      "请求数据",
+      "静态字典"
+    ],
+    "widget": "radio",
+    "default": "req"
+  },
+  "ui:fetch": {
+    "title": "请求数据",
+    "type": "object",
+    "properties": {
+      "url": {
+        "title": "请求路径",
+        "type": "string",
+        "required": true,
+        "props": {}
+      },
+      "method": {
+        "title": "请求方式",
+        "type": "string",
+        "enum": [
+          "get",
+          "post"
+        ],
+        "enumNames": [
+          "get",
+          "post"
+        ],
+        "widget": "radio",
+        "default": "get"
+      },
+      "enumMap": {
+        "title": "字段枚举",
+        "type": "object",
+        "properties": {
+          "label": {
+            "title": "label",
+            "type": "string",
+            "default": "label",
+            "required": true,
+            "props": {}
+          },
+          "value": {
+            "title": "value",
+            "type": "string",
+            "default": "value",
+            "required": true,
+            "props": {}
+          }
+        }
+      }
+    },
+    "hidden": "{{rootValue.reqMethod === 'dict'}}"
+  },
+  "enumList": {
+    "title": "选项",
+    "type": "array",
+    "widget": "simpleList",
+    "className": "frg-options-list",
+    "items": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "title": "",
+          "type": "string",
+          "className": "frg-options-input",
+          "props": {},
+          "placeholder": "字段"
+        },
+        "label": {
+          "title": "",
+          "type": "string",
+          "className": "frg-options-input",
+          "props": {},
+          "placeholder": "名称"
+        }
+      }
+    },
+    "props": {
+      "hideMove": true,
+      "hideCopy": true
+    },
+    "hidden": "{{rootValue.reqMethod === 'req'}}"
+  }
+}

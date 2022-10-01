@@ -1,10 +1,7 @@
 import React, { useMemo, useRef } from 'react'
-import Generator, {
-  defaultSettings
-} from 'fr-generator'
-import UbbInput, {widget as UbbInputWidget} from './widgets/UbbInput'
-
-defaultSettings[1].widgets.push(UbbInputWidget)
+import Generator from 'fr-generator'
+import {defaultSettings, defaultCommonSettings} from './settings'
+import widgets from './widgets'
 
 function FrGenerator (props) {
   const defaultValue = useMemo(() => props.defaultValue || {}, [])
@@ -17,10 +14,9 @@ function FrGenerator (props) {
     <div style={{ height: props.height }}>
       <Generator
         defaultValue={defaultValue}
-        widgets={{
-          UbbInput
-        }}
+        widgets={widgets}
         settings={defaultSettings}
+        commonSettings={defaultCommonSettings}
         onSchemaChange={schemaChange} />
     </div>
   )
