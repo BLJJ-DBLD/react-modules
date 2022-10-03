@@ -42,14 +42,14 @@
         "type": "object",
         "properties": {
           "label": {
-            "title": "label",
+            "title": "名称",
             "type": "string",
             "default": "label",
             "required": true,
             "props": {}
           },
           "value": {
-            "title": "value",
+            "title": "字段",
             "type": "string",
             "default": "value",
             "required": true,

@@ -22,14 +22,4 @@ function FrGenerator (props) {
   )
 }
 
-function areEqual (prevProps, nextProps) {
-
-  /*
-  return true if passing nextProps to render would return
-  the same result as passing prevProps to render,
-  otherwise return false
-  */
-  console.log(prevProps, nextProps)
-}
-
-export default React.memo(FrGenerator, areEqual)
+export default FrGenerator

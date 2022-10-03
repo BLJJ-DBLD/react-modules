@@ -1,15 +1,17 @@
 import React from 'react'
-import {links} from './const'
 import { Link } from 'react-router-dom'
+import QuickStartMap from '../components/Map/QuickStartMap'
 
 function Home () {
+  const mapLinks = [{
+    name: 'QuickStartMap',
+    path: 'QuickStartMap',
+    module: QuickStartMap
+  }]
   return (
     <>
-      <header className="App-header">
-        组件列表：
-      </header>
       <ul>
-        {links.map((route, index) => (
+        {mapLinks.map((route, index) => (
           <li key={index}>
             <Link to={route.path}>{route.name}</Link>
           </li>

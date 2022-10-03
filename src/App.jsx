@@ -1,13 +1,13 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import {routeMap} from './routers/const'
+import {routes} from './routers/const'
 import './App.css'
 
 function App () {
   return (
     <div className="App">
       <Routes>
-        {routeMap.map((route, index) => (
+        {routes.map((route, index) => (
           <Route
             key={index}
             path={route.path}

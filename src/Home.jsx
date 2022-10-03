@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import SelfModule from './components/SelfModule'
-import { Link, Routes, Route } from 'react-router-dom';
+import { Link, Routes, Route } from 'react-router-dom'
 
 function App () {
   const routeMap = [{
@@ -28,7 +28,7 @@ function App () {
         <Route path="/SelfModule" element={<SelfModule/>}></Route>
       </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

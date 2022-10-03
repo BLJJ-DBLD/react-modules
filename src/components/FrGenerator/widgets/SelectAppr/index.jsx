@@ -175,8 +175,7 @@ export default function SelectAppr ({value = {}, onChange, ...rest}) {
             <Card style={{ width: '100%', height: '60vh' }}>
               <div className="img-box" onClick={setCardScorllTop}>
                 <Image
-                  height={150}
-                  preview={false}
+                  height={200}
                   src={activeData.img || 'error'}
                   fallback="https://picsum.photos/id/237/200/300"
                 />
