@@ -20,7 +20,6 @@
       "url": {
         "title": "请求路径",
         "type": "string",
-        "required": true,
         "props": {}
       },
       "method": {

@@ -1,7 +1,7 @@
 import elementSettings from './elementSettings.json'
-import UbbInput, {widget as UbbInputWidget} from '../widgets/UbbInput'
-import SelectAppr, {widget as SelectApprWidget} from '../widgets/SelectAppr'
-import ColorBlock, {widget as ColorBlockWidget} from '../widgets/ColorBlock'
+import {widget as UbbInputWidget} from '../widgets/UbbInput'
+import {widget as SelectApprWidget} from '../widgets/SelectAppr'
+import {widget as ColorBlockWidget} from '../widgets/ColorBlock'
 
 // 只需写配置，方便可扩展
 export const baseCommonSettings = {

@@ -10,6 +10,7 @@ import {
 } from 'antd'
 import classNames from 'classnames'
 import './index.scss'
+import elementSettings from '../../settings/elementSettings.json'
 
 export const widget = {
   show: true,
@@ -22,56 +23,12 @@ export const widget = {
     widget: 'SelectAppr'
   },
   setting: {
-    'ui:fetch': {
-      'title': '请求数据',
-      'type': 'object',
-      'properties': {
-        'url': {
-          'title': '请求路径',
-          'type': 'string',
-          'required': true,
-          'props': {}
-        },
-        'method': {
-          'title': '请求方式',
-          'type': 'string',
-          'enum': [
-            'get',
-            'post'
-          ],
-          'enumNames': [
-            'get',
-            'post'
-          ],
-          'widget': 'radio',
-          'default': 'get'
-        },
-        'enumMap': {
-          'title': '字段枚举',
-          'type': 'object',
-          'properties': {
-            'label': {
-              'title': 'label',
-              'type': 'string',
-              'default': 'label',
-              'required': true,
-              'props': {}
-            },
-            'value': {
-              'title': 'value',
-              'type': 'string',
-              'default': 'value',
-              'required': true,
-              'props': {}
-            }
-          }
-        }
-      }
-    }
+    'ui:fetch': elementSettings['ui:fetch']
   }
 }
 
 export default function SelectAppr ({value = {}, onChange, ...rest}) {
+  const fallback = 'https://picsum.photos/id/237/200/200'
   const [imgSpining, setImgSpining] = useState(true)
   const [imgList, setImgList] = useState([])
   const [activeData, setActiveData] = useState({
@@ -126,12 +83,14 @@ export default function SelectAppr ({value = {}, onChange, ...rest}) {
     <div className='select-appr'>
       <div className="img-box" onClick={showModal}>
         <Image
-          height={50}
+          width={100}
           preview={false}
           src={value.img || 'error'}
-          fallback="https://picsum.photos/id/237/200/300"
+          fallback={fallback}
         />
-        <p className='label'>{value.id}: {value.label}</p>
+        <p className='label'>{
+          value.id ? `${value.id}: ${value.label}` : '请选择'
+        }</p>
       </div>
       <Modal
         title="选择外观"
@@ -158,10 +117,10 @@ export default function SelectAppr ({value = {}, onChange, ...rest}) {
                       className={classNames('img-box', {'active': item.id === activeData.id})}
                       onClick={() => setActiveData(item)}>
                       <Image
-                        height={50}
+                        width={100}
                         preview={false}
                         src={item.img || 'error'}
-                        fallback="https://picsum.photos/id/237/200/300"
+                        fallback={fallback}
                       />
                       <p className='label'>{item.label}</p>
                     </div>
@@ -175,9 +134,9 @@ export default function SelectAppr ({value = {}, onChange, ...rest}) {
             <Card style={{ width: '100%', height: '60vh' }}>
               <div className="img-box" onClick={setCardScorllTop}>
                 <Image
-                  height={200}
+                  width={200}
                   src={activeData.img || 'error'}
-                  fallback="https://picsum.photos/id/237/200/300"
+                  fallback={fallback}
                 />
                 <p className='label'>{activeData.label}</p>
               </div>
