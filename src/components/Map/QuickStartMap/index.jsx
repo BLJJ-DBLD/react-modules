@@ -30,7 +30,6 @@ const points = [shengquPoint]
 
 function QuickStartMap (props) {
   const map = useRef(null)
-  const gridMap = useRef(null)
   const mapPoints = useRef([])
   const showMenu = useRef(false)
 
@@ -62,34 +61,6 @@ function QuickStartMap (props) {
     points.forEach((point, index) => {
       savePointInfo(point, index)
     })
-  }
-  // 初始化栅格图层
-  const initGrid = () => {
-    gridMap.current = new GridLayer()
-    gridMap.current.createTile = function (coords) {
-      const tile = DomUtil.create('canvas', 'leaflet-tile')
-      const ctx = tile.getContext('2d')
-      const size = this.getTileSize()
-      tile.width = size.x
-      tile.height = size.y
-      const nwPoint = coords.scaleBy(size)
-      const nw = map.current.unproject(nwPoint, coords.z)
-      ctx.strokeRect(nwPoint.x, nwPoint.y, size.x, size.y)
-
-      /* ctx.fillStyle = 'black'
-      ctx.fillText(`x: ${coords.x}, y: ${coords.y}, zoom: ${coords.z}`, 50, 60)
-      ctx.fillText(`lat: ${nw.lat}, lng: ${nw.lng}`, 50, 80) */
-      ctx.strokeStyle = 'black'
-      ctx.beginPath()
-      ctx.moveTo(0, 0)
-      ctx.lineTo(size.x - 1, 0)
-      ctx.lineTo(size.x - 1, size.y - 1)
-      ctx.lineTo(0, size.y - 1)
-      ctx.closePath()
-      ctx.stroke()
-      return tile
-    }
-    gridMap.current.addTo(map.current)
   }
   // 监听地图点击事件
   const onMapClick = (e) => {
@@ -167,7 +138,6 @@ function QuickStartMap (props) {
   useEffect(() => {
     initMap()
     initPoints()
-    // initGrid()
     setMapListener()
     return () => {
       removeMapListener()
