@@ -1,0 +1,17 @@
+div {
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  display: inline-block;
+  width: 80vw;
+  height: 100vh;
+}
+.layers {
+  display: inline-block;
+  width: calc(100% - 80vw);
+  height: 100vh;
+  vertical-align: top;
+  padding: 20px;
+}

@@ -5,7 +5,8 @@ import SelectApprRoute from './SelectApprRoute'
 import DecomposeGoodsRoute from './DecomposeGoodsRoute'
 import FrGeneratorRoute from './FrGeneratorRoute'
 import MapRoute from './MapRoute'
-import QuickStartMap from '../components/Map/QuickStartMap'
+import QuickStartMap from '../components/MapLeaflet/QuickStartMap'
+import RichLayerMap from '../components/MapLeaflet/RichLayerMap'
 
 export const routes = [{
   name: 'home',
@@ -32,13 +33,17 @@ export const routes = [{
   path: '/FrGeneratorRoute',
   module: FrGeneratorRoute
 }, {
-  name: 'Map',
-  path: '/Map',
+  name: 'MapLeaflet',
+  path: '/MapLeaflet',
   module: MapRoute
 }, {
-  name: 'Map/QuickStartMap',
-  path: '/Map/QuickStartMap',
+  name: 'MapLeaflet/QuickStartMap',
+  path: '/MapLeaflet/QuickStartMap',
   module: QuickStartMap
+}, {
+  name: 'MapLeaflet/RichLayerMap',
+  path: '/MapLeaflet/RichLayerMap',
+  module: RichLayerMap
 }]
 
 export const links = [{
@@ -66,7 +71,7 @@ export const links = [{
   path: '/FrGeneratorRoute',
   module: FrGeneratorRoute
 }, {
-  name: 'Map',
-  path: '/Map',
+  name: 'MapLeaflet',
+  path: '/MapLeaflet',
   module: MapRoute
 }]
