@@ -4,7 +4,8 @@ import ColorBlockRoute from './ColorBlockRoute'
 import SelectApprRoute from './SelectApprRoute'
 import DecomposeGoodsRoute from './DecomposeGoodsRoute'
 import FrGeneratorRoute from './FrGeneratorRoute'
-import MapRoute from './MapRoute'
+import MapLeafletRoute from './MapLeafletRoute'
+import MapOlRoute from './MapOlRoute'
 import QuickStartMap from '../components/MapLeaflet/QuickStartMap'
 import RichLayerMap from '../components/MapLeaflet/RichLayerMap'
 
@@ -35,7 +36,7 @@ export const routes = [{
 }, {
   name: 'MapLeaflet',
   path: '/MapLeaflet',
-  module: MapRoute
+  module: MapLeafletRoute
 }, {
   name: 'MapLeaflet/QuickStartMap',
   path: '/MapLeaflet/QuickStartMap',
@@ -44,6 +45,10 @@ export const routes = [{
   name: 'MapLeaflet/RichLayerMap',
   path: '/MapLeaflet/RichLayerMap',
   module: RichLayerMap
+}, {
+  name: 'MapOl',
+  path: '/MapOl',
+  module: MapOlRoute
 }]
 
 export const links = [{
@@ -73,5 +78,9 @@ export const links = [{
 }, {
   name: 'MapLeaflet',
   path: '/MapLeaflet',
-  module: MapRoute
+  module: MapLeafletRoute
+}, {
+  name: 'MapOl',
+  path: '/MapOl',
+  module: MapOlRoute
 }]
