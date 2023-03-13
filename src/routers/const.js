@@ -5,9 +5,10 @@ import SelectApprRoute from './SelectApprRoute'
 import DecomposeGoodsRoute from './DecomposeGoodsRoute'
 import FrGeneratorRoute from './FrGeneratorRoute'
 import MapLeafletRoute from './MapLeafletRoute'
-import MapOlRoute from './MapOlRoute'
 import QuickStartMap from '../components/MapLeaflet/QuickStartMap'
 import RichLayerMap from '../components/MapLeaflet/RichLayerMap'
+import MapOlRoute from './MapOlRoute'
+import RichMap from '../components/MapOl/RichMap'
 
 export const routes = [{
   name: 'home',
@@ -49,6 +50,10 @@ export const routes = [{
   name: 'MapOl',
   path: '/MapOl',
   module: MapOlRoute
+}, {
+  name: 'RichMap',
+  path: '/MapOl/RichMap',
+  module: RichMap
 }]
 
 export const links = [{

@@ -1,17 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import QuickStartMap from '../components/MapLeaflet/QuickStartMap'
-import RichLayerMap from '../components/MapLeaflet/RichLayerMap'
+import RichMap from '../components/MapOl/RichMap'
 
 function Home () {
   const mapLinks = [{
-    name: 'QuickStartMap',
-    path: 'QuickStartMap',
-    module: QuickStartMap
-  }, {
-    name: 'RichLayerMap',
-    path: 'RichLayerMap',
-    module: RichLayerMap
+    name: 'RichMap',
+    path: 'RichMap',
+    module: RichMap
   }]
   return (
     <>
